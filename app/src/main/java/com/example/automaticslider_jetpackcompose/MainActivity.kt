@@ -33,6 +33,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.example.automaticslider_jetpackcompose.model.natural
 import com.example.automaticslider_jetpackcompose.ui.theme.AutomaticSliderjetPackComposeTheme
 import com.example.automaticslider_jetpackcompose.ui.theme.Purple500
+import com.example.automaticslider_jetpackcompose.ui.theme.bg
 import com.google.accompanist.pager.*
 
 import kotlinx.coroutines.delay
@@ -73,7 +74,7 @@ fun AutoSliding() {
     }
 
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize().background(bg)
     ) {
         Column(
             modifier = Modifier
@@ -155,7 +156,7 @@ fun AutoSliding() {
                         ).apply {
                             rating = natural.rating
                             progressDrawable.setColorFilter(
-                                android.graphics.Color.parseColor("#FF0000"),
+                                android.graphics.Color.parseColor("#FFD700"),
                                 PorterDuff.Mode.SRC_ATOP
                             )
                         }
@@ -182,6 +183,7 @@ fun AutoSliding() {
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
                 .padding(16.dp)
+
         )
     }
 }
